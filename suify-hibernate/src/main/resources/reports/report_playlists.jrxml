@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlaylistsReport" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="11111111-2222-3333-4444-555555555555">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ReportTitle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT id, title, artist FROM playlists ORDER BY id ASC]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="title" class="java.lang.String"/>
+	<field name="artist" class="java.lang.String"/>
+	<title>
+		<band height="60">
+			<staticText>
+				<reportElement x="0" y="0" width="515" height="30" uuid="f4586d98-5f2e-477c-9e9b-2e6075e2a92b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Hasil PDF]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="35" width="515" height="1" uuid="2f4872f1-a117-4a1b-afd0-38d9f7d425dc"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="a96a0dc3-2c5e-4955-8f21-5658a0e7f20a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ID"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="250" height="20" uuid="7416f0e0-dda7-4949-b601-df8caea6a0f3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Title"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="195" height="20" uuid="f34cf5cb-f26e-4399-918d-5e4f555726c4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Artist"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="74471e5e-9bda-40f8-82fe-bdf42a3bf469"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="250" height="20" uuid="471378bf-e709-416f-b7bd-28df2cc283b1"/>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="195" height="20" uuid="461e6e41-7b32-4b4f-b106-8c59cf07bf4a"/>
+				<textFieldExpression><![CDATA[$F{artist}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="515" height="20" uuid="df234b89-cfe4-4e18-831c-87f349dbe0dd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

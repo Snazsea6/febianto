@@ -1,0 +1,3 @@
+com\suify\App.class
+com\suify\util\HibernateUtil.class
+com\suify\model\Playlist.class
