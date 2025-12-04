@@ -8,7 +8,7 @@ Aplikasi ini juga menyediakan fitur pembuatan laporan melalui **iReport (JasperR
 
 ## 📌 Fitur Utama Aplikasi
 ### 🔹 Frontend
-- Tampilan modern (dark mode) mirip Spotify  
+- Tampilan modern (light mode) mirip Spotify  
 - Halaman:
   - **HomePage**
   - **PlaylistPage**
@@ -45,6 +45,4 @@ Aplikasi ini juga menyediakan fitur pembuatan laporan melalui **iReport (JasperR
 | Version Control | Git + GitHub |
 
 ---
-
-## 📂 Struktur Folder Project
 
